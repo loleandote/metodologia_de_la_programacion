@@ -14,41 +14,19 @@ public class Presentacion {
 		System.out.println("El resultado obtenido resulto a traves de la formula cerrada es: " + clase_negocio.formula_cerrada(numero));
 		t1=System.nanoTime();
 		deltaT=t1-t0;
-		System.out.println("El tiempoo usado para la formula cerrada es");
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(deltaT);
+		System.out.println("El tiempoo usado para la formula cerrada es "+deltaT);
 		
 		t0=System.nanoTime();
 		System.out.println("El resultado obtenido resulto a traves de la formula iterativa es: "+clase_negocio.iterativo(numero));
 		t1=System.nanoTime();
-		
 		deltaT=t1-t0;
-		System.out.println("El tiempoo usado para la formula iterativa es");
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(deltaT);
+		System.out.println("El tiempoo usado para la formula iterativa es "+deltaT);
 		
 		t0=System.nanoTime();
 		System.out.println("El resultado obtenido resulto a traves de la formula recursiva es: "+clase_negocio.recursivo(numero));
 		t1=System.nanoTime();
 		deltaT=t1-t0;
-		System.out.println("El tiempoo usado para la formula recursiva es");
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println(deltaT);
+		System.out.println("El tiempoo usado para la formula recursiva es "+deltaT);
 		leer.close();
 		
 		
