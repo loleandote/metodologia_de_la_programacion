@@ -1,16 +1,16 @@
 package caso1;
 
 /**
- * La clase contiene tres métodos que calculan el n-ésimo número hexagonal
+ * La clase contiene tres metodos que calculan el n-esimo numero hexagonal
  */
 public class clase_negocio {
 	
 	/**
-	 * La función toma un entero como argumento y devuelve el número hexagonal de ese entero
+	 * La funcion toma un entero como argumento y devuelve el numero hexagonal de ese entero
 	 * Presenta una complejidad de O(1)
 	 * 
-	 * @param x El número del número hexagonal que desea encontrar.
-	 * @return El enésimo número hexagonal.
+	 * @param x El numero del numero hexagonal que desea encontrar.
+	 * @return El n-esimo numero hexagonal.
 	 */
 	public static int formula_cerrada(int x) {
 		int nHexagonal;
@@ -19,15 +19,15 @@ public class clase_negocio {
 	}
 
 	/**
-	 * La función iterativo() toma un entero x como parámetro y devuelve el número
+	 * La funcion iterativo() toma un entero x como parametro y devuelve el numero
 	 * hexagonal de x
 	 * Relacion de recurrencia de la formula 
 	 * T(n) = T(n-1) +1 con T(1) = 1
-	 * T(n) = (T(n-2) +1) + 1 = T(n-2) + 2 = …= T(n-(n-1)) + (n-1) = T(1) + n -1 = n
+	 * T(n) = (T(n-2) +1) + 1 = T(n-2) + 2 = ... = T(n-(n-1)) + (n-1) = T(1) + n -1 = n
 	 * Con una complejidad de O(n)
 	 * 
-	 * @param x El número de hexágonos que se agregarán.
-	 * @return El número de mosaicos hexagonales en un hexágono con un lado de
+	 * @param x El numero de hexagonos que se agregaron.
+	 * @return El numero de mosaicos hexagonales en un hexagono con un lado de
 	 *         longitud x.
 	 */
 	public static int iterativo(int x) {
@@ -38,12 +38,12 @@ public class clase_negocio {
 	}
 
 	/**
-	 * La función se llama recursivamente a sí misma hasta que el valor de x es 1, luego devuelve el valor
+	 * La funcion se llama recursivamente a si misma hasta que el valor de x es 1, luego devuelve el valor
 	 * de nHexagonal
 	 * Con una complejidad de O(n)
 	 * 
-	 * @param x El número del número hexagonal que desea encontrar.
-	 * @return El enésimo número hexagonal.
+	 * @param x El numero del termino hexagonal que desea encontrar.
+	 * @return El n-esimo numero hexagonal.
 	 */
 	public static int recursivo(int x) {
 		int nHexagonal=1;
