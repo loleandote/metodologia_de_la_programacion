@@ -3,7 +3,7 @@ package caso1;
 /**
  * La clase contiene tres metodos que calculan el n-esimo numero hexagonal
  */
-public class clase_negocio {
+public class ClaseNegocio {
 	
 	/**
 	 * La funcion toma un entero como argumento y devuelve el numero hexagonal de ese entero
