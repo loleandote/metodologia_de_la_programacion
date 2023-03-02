@@ -17,21 +17,21 @@ public class Presentacion {
 
 		t0 = System.nanoTime();
 		System.out.println("El resultado obtenido resulto a traves de la formula cerrada es: "
-				+ clase_negocio.formula_cerrada(numero));
+				+ ClaseNegocio.formula_cerrada(numero));
 		t1 = System.nanoTime();
 		deltaT = t1 - t0;
 		System.out.println("El tiempo usado para la formula cerrada es " + deltaT);
 
 		t0 = System.nanoTime();
 		System.out.println("El resultado obtenido resulto a traves de la formula iterativa es: "
-				+ clase_negocio.iterativo(numero));
+				+ ClaseNegocio.iterativo(numero));
 		t1 = System.nanoTime();
 		deltaT = t1 - t0;
 		System.out.println("El tiempo usado para la formula iterativa es " + deltaT);
 
 		t0 = System.nanoTime();
 		System.out.println("El resultado obtenido resulto a traves de la formula recursiva es: "
-				+ clase_negocio.recursivo(numero));
+				+ ClaseNegocio.recursivo(numero));
 		t1 = System.nanoTime();
 		deltaT = t1 - t0;
 		System.out.println("El tiempo usado para la formula recursiva es " + deltaT);
