@@ -1,7 +1,9 @@
 package caso1;
 
+/**
+ * La clase contiene tres métodos que calculan el n-ésimo número hexagonal
+ */
 public class clase_negocio {
-
 	
 	/**
 	 * La función toma un entero como argumento y devuelve el número hexagonal de ese entero
@@ -19,6 +21,9 @@ public class clase_negocio {
 	/**
 	 * La función iterativo() toma un entero x como parámetro y devuelve el número
 	 * hexagonal de x
+	 * Relacion de recurrencia de la formula 
+	 * T(n) = T(n-1) +1 con T(1) = 1
+	 * T(n) = (T(n-2) +1) + 1 = T(n-2) + 2 = …= T(n-(n-1)) + (n-1) = T(1) + n -1 = n
 	 * Con una complejidad de O(n)
 	 * 
 	 * @param x El número de hexágonos que se agregarán.
