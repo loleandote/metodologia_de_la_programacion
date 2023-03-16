@@ -18,9 +18,9 @@ public class ClaseNegocio {
 	public static int MergeAndCounts(double a[], int p, int q, int r) {
 
 		int i = p, j = q + 1, k = p, veces = 0;
-		int[] temp = new int[r - p + 1];
+		double[] temp = new double[r - p + 1];
 		for (int l = p; l <= r; l++)
-			temp[l - p] = (int) a[l];
+			temp[l - p] = a[l];
 
 		while (i <= q && j <= r) {
 			if (temp[i - p] <= temp[j - p]) {
