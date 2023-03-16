@@ -9,7 +9,7 @@ public class Presentacion {
 
 		double a[] = lectorDat("InversionsTest_6.dat");
 
-		System.out.println(ClaseNegocio.countInversions(a, 0, a.length - 1));
+		System.out.println("Inversiones: "+ ClaseNegocio.countInversions(a, 0, a.length - 1)+"\nArray:");
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);
 		}
