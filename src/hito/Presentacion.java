@@ -6,11 +6,15 @@ import java.util.Scanner;
 public class Presentacion {
 	public static void main(String[] args) throws Exception {
 
-		double a[] = lectorDat("InversionsTest_6.dat");
-		System.out.println("Inversiones: "+ ClaseNegocio.countInversions(a, 0, a.length - 1)+"\nArray:");
+
+		double a[] = lectorDat("InversionsHito1.dat");
+		System.out.println("Array:");
+		int inversiones = ClaseNegocio.countInversions(a, 0, a.length - 1);
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);
 		}
+		System.out.println("Inversiones: "+ inversiones);
+
 	}
 
 	/**

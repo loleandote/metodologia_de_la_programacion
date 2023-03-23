@@ -7,9 +7,14 @@ public class ClaseNegocio {
 	
 
 		/**
-		 * Si la matriz es de tamaño 1, entonces no hay inversiones. De lo contrario, divide la matriz en dos
+		 *
+		 * Para resolver la parte recursiva 2T(n/2), se divide entre 2 ya que se  divide la matriz en dos
 		 * mitades, cuenta la cantidad de inversiones en cada mitad y las suma. Luego, cuenta la cantidad de
 		 * inversiones en las dos mitades y lo suma al total
+		 * Para combinar, tendremos O (n), ya que se tienen que recorrer todos los elementos del array.
+		 * Siguiendo el Master Theorem, tendremos:
+		 * T(n) = 2T(n/2) + f(n), f(n) * O(n^d) d >= 0.
+		 * T(n) * (n log n)
 		 * 
 		 * @param a la matriz a ordenar
 		 * @param p el comienzo de la matriz
@@ -52,6 +57,7 @@ public class ClaseNegocio {
 				} else {
 					a[k] = temp[j - p];
 					j++;
+					//Comprueba si el valor obtenido de la lista InversionsHito1, es 1 o 2
 					if(a[k]==1 || a[k]==2) {
 						veces++;
 					}
