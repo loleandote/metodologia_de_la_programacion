@@ -1,18 +1,18 @@
 package caso2;
 
 /**
- * Toma una matriz de dobles la ordena de menor a mayor y devuelve el número de inversiones en la matriz
+ * Toma una matriz de dobles la ordena de menor a mayor y devuelve el numero de inversiones en la matriz
  */
 public class ClaseNegocio {
 
 	/**
-	 * Si la matriz es de tamaño 1, entonces no hay inversiones. De lo contrario, divide la matriz en dos
+	 * Si la matriz es de tama�o 1, entonces no hay inversiones. De lo contrario, divide la matriz en dos
 	 * mitades, cuenta la cantidad de inversiones en cada mitad y las suma. Luego, cuenta la cantidad de
 	 * inversiones en las dos mitades y lo suma al total
 	 * 
 	 * @param a la matriz a ordenar
 	 * @param p el comienzo de la matriz
-	 * @param r el último índice de la matriz
+	 * @param r el ultimo indice de la matriz
 	 * @return cantidad de inversiones en la matriz.
 	 */
 	public static int countInversions(double a[], int p, int r) {
@@ -29,13 +29,13 @@ public class ClaseNegocio {
 
 	/**
 	 * Toma una matriz, un indice inicial, un indice medio y un indice final, combina las dos submatrices
-	 * en una matriz ordenada y devuelve el número de inversiones en las submatrices.
+	 * en una matriz ordenada y devuelve el numero de inversiones en las submatrices.
 	 * 
 	 * @param a la matriz a ordenar
-	 * @param p el primer índice de la matriz
+	 * @param p el primer indice de la matriz
 	 * @param q el medio de la matriz
-	 * @param r el último índice de la matriz
-	 * @return El número de veces que se ordena la matriz.
+	 * @param r el ultimo indice de la matriz
+	 * @return El numero de veces que se ordena la matriz.
 	 */
 	public static int MergeAndCounts(double a[], int p, int q, int r) {
 

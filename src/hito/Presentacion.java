@@ -1,4 +1,4 @@
-package caso2;
+package hito;
 
 import java.io.File;
 import java.util.Scanner;
