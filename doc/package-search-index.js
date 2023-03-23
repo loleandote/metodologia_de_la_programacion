@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"metodologia_de_la_programcion","l":"caso1"}];updateSearchResults();

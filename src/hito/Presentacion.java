@@ -4,8 +4,14 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Presentacion {
-	public static void main(String[] args) throws Exception {
+	/**
+	 * El numero de inversiones es 9.
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
 
+	public static void main(String[] args) throws Exception {
 
 		double a[] = lectorDat("InversionsHito1.dat");
 		System.out.println("Array:");
@@ -13,7 +19,7 @@ public class Presentacion {
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);
 		}
-		System.out.println("Inversiones: "+ inversiones);
+		System.out.println("Inversiones: " + inversiones);
 
 	}
 
