@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Presentacion {
 	public static void main(String[] args) throws Exception {
-
+//
 		double a[] = lectorDat("InversionsHito1.dat");
 		System.out.println("Array:");
 		int inversiones = ClaseNegocio.countInversions(a, 0, a.length - 1);
