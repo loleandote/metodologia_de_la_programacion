@@ -28,6 +28,7 @@ public class Presentacion {
 		for (int i = 0; i < nCases; i++) {
 			a[i] = read.nextDouble();
 		}
+		read.close();
 		return a;
 	}
 
