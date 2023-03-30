@@ -12,7 +12,7 @@ public class Presentacion {
 		parcela = leer.nextInt();
 		System.out.println("¿Cual es el numero de balsosas que temdremos?");
 		System.out.println("Inserte las dimensiones de las balsosas en m");
-hgvbjnmk,.
+
 		leer.close();
 		
 	}
