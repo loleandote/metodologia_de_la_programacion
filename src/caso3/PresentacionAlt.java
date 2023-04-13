@@ -20,7 +20,7 @@ public class PresentacionAlt {
       //baldosas.add(500);
       baldosas.add(300);
       baldosas.add(200);
-      //baldosas.add(100);
+      baldosas.add(100);
       baldosas.sort(Comparator.reverseOrder());
       int ancho = 500;
       int alto = 500;
@@ -49,7 +49,7 @@ class PresentacionResultados extends JFrame {
    private Squares squares;
    
    public PresentacionResultados(int ancho, int alto) {
-      super("El suelo");
+      super("El suelo crack XD");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       squares = new Squares(ancho, alto);
    }
@@ -71,6 +71,7 @@ class Squares extends JPanel {
    private int PREF_H;
    private List<Rectangle> squares = new ArrayList<Rectangle>();
    private final Color[] colores={Color.RED,Color.GREEN, Color.CYAN,Color.MAGENTA,Color.YELLOW,new Color(93,193,185),new Color(51,255,153)};
+   private final Color[] coloresAlt={Color.RED,new Color(205,92, 92,80), Color.CYAN,Color.MAGENTA,Color.YELLOW,new Color(93,193,185),new Color(51,255,153)};
    public Squares(int ancho, int alto) {
       PREF_W = ancho;
       PREF_H = alto;
@@ -91,11 +92,14 @@ class Squares extends JPanel {
       super.paintComponent(g);
       Graphics2D g2 = (Graphics2D) g;
       for (Rectangle rect : squares) {
-         g2.draw(rect);
-         Color color = colores[(int)((rect.getWidth()/100)%colores.length)];
+         //Color color = colores[(int)((rect.getWidth()/100)%colores.length)];
+         Color color = coloresAlt[(int)((rect.getWidth()/100)%colores.length)];
+
          g2.setColor(color);
          g2.fill(rect);
          g2.setPaint(Color.GRAY);
+         
+         g2.draw(rect);
       }
    }
 }

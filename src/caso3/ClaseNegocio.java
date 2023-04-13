@@ -117,7 +117,7 @@ class Suelo {
                         yAux += baldosa;
                     }
                 }
-                int ybajo = 1 + baldosa;
+                int ybajo = 1 + (alto / baldosa)*baldosa;
                 int xlado = 1 + (ancho / baldosa) * baldosa;
                 if (anchoAux > 0) {
                     sueloLado = new Suelo(anchoAux, alto, xlado, y, baldosas, nivel);
