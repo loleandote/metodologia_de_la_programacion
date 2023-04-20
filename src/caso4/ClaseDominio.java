@@ -2,12 +2,13 @@ package caso4;
 
 public class ClaseDominio {
     
-    public static void hacerTodoAlt(Beca[]becas, int nivel, int[]becasSelecionadas){
+    public static void hacerTodo(Beca[]becas, int nivel, int[]becasSelecionadas){
         if(nivel<becas.length-1){
+            //hacer cositas
             becasSelecionadas[nivel]=1;
-        }else{
-                hacerTodoAlt(becas,nivel++,becasSelecionadas);
-                
+            hacerTodo(becas,++nivel,becasSelecionadas); 
+        }else{  
+            //hacer otras cositas
             becasSelecionadas[nivel]=1;
         }
     }
