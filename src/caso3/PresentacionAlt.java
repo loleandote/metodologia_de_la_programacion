@@ -98,7 +98,7 @@ class Squares extends JPanel {
          g2.setColor(color);
          g2.fill(rect);
          g2.setPaint(Color.GRAY);
-         
+         System.out.println("Hola");
          g2.draw(rect);
       }
    }
