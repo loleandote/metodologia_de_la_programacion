@@ -19,6 +19,6 @@ public class Beca {
         return salarioMensual;
     }
     public int getSalarioTotal(){
-        return (mesFin-mesInicio)*salarioMensual;
+        return (mesFin-mesInicio+1)*salarioMensual;
     }
 }

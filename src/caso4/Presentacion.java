@@ -10,8 +10,8 @@ public class Presentacion {
         Beca[]becas;
         try {
             becas= leerBecas("DatosCaso4.csv");
-            int []becasSelecionadasAlt= new int[becas.length];
-            ClaseDominio.hacerTodo(becas, 0, becasSelecionadasAlt);
+            int []becasSelecionadas= new int[becas.length];
+            System.out.println(ClaseDominio.hacerTodoAlt(becas, 0, becasSelecionadas));
             System.out.println("Hola");
         } catch (IOException e) {
             e.printStackTrace();
