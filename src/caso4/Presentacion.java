@@ -2,6 +2,7 @@ package caso4;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -11,8 +12,13 @@ public class Presentacion {
         try {
             becas= leerBecas("DatosCaso4.csv");
             int []becasSelecionadas= new int[becas.length];
-            System.out.println(ClaseDominio.hacerTodoAlt(becas, 0, becasSelecionadas));
-            System.out.println("Hola");
+            int  resultado=ClaseDominio.hacerTodo(becas, 0, becasSelecionadas);
+            System.out.println("El máximo que puedes recibir es "+resultado);
+            for (int i=0; i<becasSelecionadas.length;i++) {
+                if(becasSelecionadas[i]>0)
+                    System.out.println("Debes seleccionar la "+i+"ª beca, la cual empieza el mes "+becas[i].getMesInicio()
+                    +" y termina el "+becas[i].getMesFin()+" con una cuantia total de "+becas[i].getSalarioTotal());
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

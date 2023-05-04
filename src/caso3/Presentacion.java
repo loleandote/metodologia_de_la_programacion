@@ -26,7 +26,7 @@ public class Presentacion {
 		}
 		do {
 			System.out.println(
-					"Introduce el tamano de una baldosa mayor que 0 para anyadilo a la lista, O para terminar");
+					"Introduce el tamano de una baldosa mayor que 0 para anyadilo a la lista, 0 para terminar");
 			try {
 				tamanioBaldosa = sc.nextInt();
 				if (tamanioBaldosa > 0 && !baldosas.contains(tamanioBaldosa))
@@ -38,6 +38,10 @@ public class Presentacion {
 			}
 		} while (tamanioBaldosa != 0);
 		sc.close();
+
+		System.out.println("------------------------------------------------");
+		System.out.println("---------------Creacion del suelo---------------");
+		System.out.println("------------------------------------------------");
 		Collections.sort(baldosas, Comparator.reverseOrder());
 		int[][] suelo = new int[tamanioSuelo][tamanioSuelo];
 		ClaseNegocio.rellenarSuelo(suelo, baldosas);

@@ -15,6 +15,7 @@ public class Beca {
     public int getMesFin(){
         return mesFin;
     }
+    //hola
     public int getSalarioMensual(){
         return salarioMensual;
     }
