@@ -41,7 +41,6 @@ public class ClaseNegocioV2 {
 	 * 2 aparecen en la matriz combinada y ordenada.
 	 */
 	public static int MergeAndCounts(double a[], int left, int mid, int right) {
-
 		int i = left, j = mid + 1, k = left, veces = 0;
 		double[] temp = new double[right - left + 1];
 		for (int l = left; l <= right; l++)
