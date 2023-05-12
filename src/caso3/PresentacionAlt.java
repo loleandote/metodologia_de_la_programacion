@@ -26,7 +26,7 @@ public class PresentacionAlt {
       int alto = 500;
       Map<Integer, Integer> baldosasH = new HashMap<Integer, Integer>();
       PresentacionResultados presentacion = new PresentacionResultados(ancho, alto);
-      ClaseNegocio.resolver(ancho, alto, baldosas, baldosasH, presentacion);
+      ClaseNegocioVentana.resolver(ancho, alto, baldosas, baldosasH, presentacion);
       presentacion.mostar();
       ArrayList<Integer> keys = new ArrayList<Integer>(baldosasH.keySet());
 		int areaTotal= ancho*alto;
