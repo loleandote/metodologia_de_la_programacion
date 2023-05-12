@@ -45,7 +45,7 @@ public class ClaseNegocio {
 	 * @param x El numero del termino hexagonal que desea encontrar.
 	 * @return El n-esimo numero hexagonal.
 	 */
-	public static int recursivo(int x) {
+	public static int recursivo(int x) throws StackOverflowError{
 		int nHexagonal=1;
 		if(x>1) 
 			nHexagonal=recursivo(x-1)+4*x-3;

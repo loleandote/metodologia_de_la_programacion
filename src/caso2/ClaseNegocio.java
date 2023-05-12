@@ -65,6 +65,8 @@ public class ClaseNegocio {
 				a[k] = temp[i - p];
 				k++;
 				i++;
+// Sugerencia
+// veces++;
 			}
 		}
 		return veces;
