@@ -15,8 +15,8 @@ public class Presentacion {
             System.out.println("El máximo que puedes recibir es "+resultado);
             for (int i=0; i<becasSelecionadas.length;i++) {
                 if(becasSelecionadas[i]>0)
-                    System.out.println("Debes seleccionar la "+i+"ª beca, la cual empieza el mes "+becas[i].getMesInicio()
-                    +" y termina el "+becas[i].getMesFin()+" con una cuantia total de "+becas[i].getSalarioTotal());
+                    System.out.println("Debes seleccionar la "+(i+1)+"ª beca, la cual empieza el mes "+becas[i].getMesInicio()
+                    +" y termina el "+becas[i].getMesFin()+", con una cuantia total de "+becas[i].getSalarioTotal()+" y una cuantia menusal de "+becas[i].getSalarioMensual()+".");
             }
         } catch (IOException e) {
             e.printStackTrace();

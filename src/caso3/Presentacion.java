@@ -17,8 +17,7 @@ public class Presentacion {
 
 		try {
 			while (tamanioSuelo <= 0) {
-				System.out.println("Dime el tamanyo del suelo mayor que 0");
-				tamanioSuelo = sc.nextInt();
+				tamanioSuelo = leerNumero(sc,"Dime el tamanyo del suelo mayor que 0");
 			}
 		} catch (InputMismatchException e) {
 			System.out.println("El tamanyo del suelo tiene que ser un numero");
@@ -26,18 +25,10 @@ public class Presentacion {
 			return;
 		}
 		do {
-			System.out.println(
-					"Introduce el tamano de una baldosa mayor que 0 para anyadilo a la lista, 0 para terminar");
-			try {
-				tamanioBaldosa = sc.nextInt();
+				tamanioBaldosa = leerNumero(sc, "Introduce el tamano de una baldosa mayor que 0 para anyadilo a la lista, 0 para terminar");
 				if (tamanioBaldosa > 0 && !baldosas.contains(tamanioBaldosa))
 					baldosas.add(tamanioBaldosa);
-			} catch (InputMismatchException e) {
-				System.out.println("El tamanyo de baldosa tiene que ser un numero");
-				sc.close();
-				return;
-			}
-		} while (tamanioBaldosa != 0);
+		} while (tamanioBaldosa <= 0);
 		sc.close();
 
 		System.out.println("------------------------------------------------");
@@ -57,5 +48,15 @@ public class Presentacion {
 			System.out.println("");
 		}
 	}
+	 private static int leerNumero(Scanner sc, String mensaje) {
+        try {
+			System.out.println(mensaje);
+            return sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.err.println("Introduce un número crack.");
+            sc.next();
+            return leerNumero(sc, mensaje);
+        }
+    }
 }
 
