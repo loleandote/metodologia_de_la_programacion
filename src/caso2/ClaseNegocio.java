@@ -4,69 +4,61 @@ package caso2;
  * Toma una matriz de dobles la ordena de menor a mayor y devuelve el numero de inversiones en la matriz
  */
 public class ClaseNegocio {
-
 	/**
-	 *
-	 * Para resolver la parte recursiva 2T(n/2), se divide entre 2 ya que se  divide la matriz en dos
-	 * mitades, cuenta la cantidad de inversiones en cada mitad y las suma. Luego, cuenta la cantidad de
-	 * inversiones en las dos mitades y lo suma al total
-	 * Para combinar, tendremos O (n), ya que se tienen que recorrer todos los elementos del array.
-	 * Siguiendo el Master Theorem, tendremos:
-	 * T(n) = 2T(n/2) + f(n), f(n) pertenece O(n^d) d >= 0.
-	 * T(n) pertenece (n log n)
+	 * La función cuenta el número de inversiones en una matriz utilizando el algoritmo de clasificación
+	 * por combinación.
 	 * 
-	 * @param a la matriz a ordenar
-	 * @param p el comienzo de la matriz
-	 * @param r el ultimo indice de la matriz
-	 * @return cantidad de inversiones en la matriz.
+	 * @param a una matriz de dobles para las que queremos contar inversiones
+	 * @param left El índice del elemento más a la izquierda en el arreglo o subarreglo que se está
+	 * considerando.
+	 * @param right El índice del elemento más a la derecha en el subarreglo que se está considerando.
+	 * @return El método devuelve un valor entero, que representa el número de inversiones en la matriz
+	 * dada.
 	 */
-	public static int countInversions(double a[], int p, int r) {
+	public static int countInversions(double a[], int left, int right) {
 		int veces = 0;
-		if (p < r) {
-			int mid = (p + r) / 2;
-			veces = countInversions(a, p, mid);
-			veces += countInversions(a, mid + 1, r);
-			veces += MergeAndCounts(a, p, mid, r);
+		if (left < right) {
+			int mid = (left + right) / 2;
+			veces = countInversions(a, left, mid);
+			veces += countInversions(a, mid + 1, right);
+			veces += MergeAndCounts(a, left, mid, right);
 
 		}
 		return veces;
 	}
 
+	
 	/**
-	 * Toma una matriz, un indice inicial, un indice medio y un indice final, combina las dos submatrices
-	 * en una matriz ordenada y devuelve el numero de inversiones en las submatrices.
+	 * La función fusiona dos subarreglos ordenados y cuenta el número de inversiones.
 	 * 
-	 * @param a la matriz a ordenar
-	 * @param p el primer indice de la matriz
-	 * @param q el medio de la matriz
-	 * @param r el ultimo indice de la matriz
-	 * @return El numero de veces que se ordena la matriz.
+	 * @param a Una matriz de valores dobles.
+	 * @param left El parámetro "izquierda" representa el índice inicial del subarreglo que debe
+	 * fusionarse y contarse.
+	 * @param mid El parámetro "mid" representa el índice del elemento central en la matriz "a".
+	 * @param right El parámetro "right" representa el índice del elemento más a la derecha en el arreglo
+	 * o subarreglo que se está considerando.
+	 * @return El método devuelve el número de inversiones en la matriz.
 	 */
-	public static int MergeAndCounts(double a[], int p, int q, int r) {
+	public static int MergeAndCounts(double a[], int left, int mid, int right) {
+		int i = left, j = mid + 1, k = left, veces = 0;
+		double[] temp = new double[right - left + 1];
+		for (int l = left; l <= right; l++)
+			temp[l - left] = a[l];
 
-		int i = p, j = q + 1, k = p, veces = 0;
-		double[] temp = new double[r - p + 1];
-		for (int l = p; l <= r; l++)
-			temp[l - p] = a[l];
-
-		while (i <= q && j <= r) {
-			if (temp[i - p] <= temp[j - p]) {
-				a[k] = temp[i - p];
-				i++;
-			} else {
-				a[k] = temp[j - p];
-				j++;
-				veces++;
+		while (i <= mid && j <= right) {
+			if (temp[i - left] <= temp[j - left]) 
+				a[k] = temp[i++ - left];
+			else {
+				a[k] = temp[j++ - left];
+				veces+= (mid+1 - i);
 			}
 			k++;
 		}
-		if (j - 1 == r) {
-			while (i <= q) {
-				a[k] = temp[i - p];
+		if (j - 1 == right) {
+			while (i <= mid) {
+				a[k] = temp[i - left];
 				k++;
 				i++;
-// Sugerencia
-// veces++;
 			}
 		}
 		return veces;
