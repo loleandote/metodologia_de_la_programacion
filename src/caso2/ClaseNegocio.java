@@ -44,7 +44,6 @@ public class ClaseNegocio {
 		double[] temp = new double[right - left + 1];
 		for (int l = left; l <= right; l++)
 			temp[l - left] = a[l];
-
 		while (i <= mid && j <= right) {
 			if (temp[i - left] <= temp[j - left]) 
 				a[k] = temp[i++ - left];
@@ -63,5 +62,4 @@ public class ClaseNegocio {
 		}
 		return veces;
 	}
-
 }
